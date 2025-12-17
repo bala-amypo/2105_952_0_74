@@ -1,62 +1,49 @@
 package com.example.demo.entity;
 
-import java.time.LocalDate;
-
-import jakarta.persistence.*;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 @Entity
-public class Student{
+//@Table(name="StudentTable")
+public class Student {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id ;
     private String name;
-    private String dept;
-    private LocalDate dob;
-    private float cgpa;
-    public Long getId(){
-        return id;
-
-    }
+    private String email;
+    
+    
     public void setId(Long id){
         this.id=id;
+
     }
-    public String getName(){
+    public Long getId() {
+        return id;
+        
+    }
+    public String getName() {
         return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public Student(Long id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+       
+    }
+    public Student() {
+    }
 
-    }
-    public void setName(String name){
-        this.name=name;
-    }
-    public String getDept(){
-        return dept;
-
-    }
-    public void setDept(String dept){
-        this.dept=dept;
-    }
-    public LocalDate getDob(){
-        return dob;
-
-    }
-    public void setDob(LocalDate dob){
-        this.dob=dob;
-    }
-    public float getcgpa(){
-        return cgpa;
-
-    }
-    public void setcgpa(float cgpa){
-        this.cgpa=cgpa;
-    }
-    public Student(){
-
-    }
-    public Student(Long id,String name,String dept,LocalDate dob,float cgpa){
-        this.id=id;
-        this.name=name;
-        this.dept=dept;
-        this.dob=dob;
-        this.cgpa=cgpa;
-    }
 
 }
