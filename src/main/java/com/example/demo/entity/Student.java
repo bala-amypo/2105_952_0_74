@@ -1,6 +1,9 @@
 Package com.example.demo.entity;
 
 public class Student{
-    Private Long id;
-    Private 
+    private Long id;
+    private String name;
+    private String dept;
+    private Localhost dob;
+    private float cgpa;
 }
