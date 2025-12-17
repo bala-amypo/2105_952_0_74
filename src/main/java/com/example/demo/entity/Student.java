@@ -35,12 +35,12 @@ public class Student{
     public void setLocalDate(LocalDate dob){
         this.dob=dob;
     }
-    public Long getLocalDate(){
-        return dob;
+    public Long getcgpa(){
+        return cgpa;
 
     }
-    public void setLocalDate(){
-        this.dob=dob;
+    public void setcgpa(float cgpa){
+        this.cgpa=cgpa;
     }
     
 
