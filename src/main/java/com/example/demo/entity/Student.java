@@ -21,4 +21,27 @@ public class Student{
     public void setName(String name){
         this.name=name;
     }
+    public Long getDept(){
+        return dept;
+
+    }
+    public void setDept(String dept){
+        this.dept=dept;
+    }
+    public Long getLocalDate(){
+        return dob;
+
+    }
+    public void setLocalDate(LocalDate dob){
+        this.dob=dob;
+    }
+    public Long getLocalDate(){
+        return dob;
+
+    }
+    public void setLocalDate(){
+        this.dob=dob;
+    }
+    
+
 }
