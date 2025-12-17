@@ -8,12 +8,13 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @Service
-public class StudentServiceImple implements StudentService {
+public class StudentServiceImpl implements StudentService {
     @Autowired
-    StudentRepository studentRepository;
+    StudentRepository stdrepo;
+    @Override
 
-    public Student saveStudent(Student st){
-        return studentRepository.save(st);
+    public Student poststudent(Student st){
+        return stdrepo.save(st);
     }
     
 }
