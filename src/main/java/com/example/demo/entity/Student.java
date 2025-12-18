@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
-
+import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
@@ -47,6 +47,7 @@ public class Student {
     public void setCgpa(float cgpa){
         this.cgpa=cgpa;
     }
+    
     public Student(){
 
     }
@@ -57,4 +58,5 @@ public class Student {
         this.dob=dob;
         this.cgpa=cgpa;
     }
+    
 }
