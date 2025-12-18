@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 import java.util.List;
 import java.util.Optional;
-import jakarta.validation.constraints.*;
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,5 +34,4 @@ public class StudentController {
     public String update(@PathVariable Long id, @RequestBody Student st){
         return stdser.updateData(id,st);
     }
-    @DeleteMapping
 }
