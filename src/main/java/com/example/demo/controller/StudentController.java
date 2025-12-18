@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,7 +30,7 @@ public class StudentController {
      return stdser.getById(id);
     }
     @PutMapping("/update/{id}")
-    public String update(@PathVariable Long id,@RequestBody student st){
-        
+    public String update(@PathVariable Long id, @RequestBody Student st){
+        return stdser.updateData(id,st);
     }
 }
