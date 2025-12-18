@@ -43,7 +43,7 @@ public class StudentServiceImpl implements StudentService {
         boolean status=stdrepo.existsById(id);
         if(status){
             stdrepo.deleteById(id);
-            return 
+            return "Student "
         }
     }
 }
