@@ -17,5 +17,11 @@ public class StudentController {
         return stdser.poststudent(st);
     }
     @GetMapping("/getall")
-    public
+    public List<Student> get(){
+        return stdser.getAllStudents();
+    }
+    @GetMapping("/getById/{id}")
+    public Optional<Student> getId(@Pathvariable Long id){
+        return stdser.getById(id);
+    }
 }
